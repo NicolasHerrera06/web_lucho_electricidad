@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Head todo la info que es para el navegador y no se ve, salvo el titulo. -->
+	<meta charset="UTF-8">
+	<title>Lucho Electricidad</title>
+	<!-- Estilos de Bootstrap que es codigo responsive y visual ya escrito por otro. -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<!-- codigo de colores y estilos escrito por nosotros -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Tipografia openSans -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<!-- esto es para que el navegador se de cuenta cuando estamos en un celuar o tableta-->
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+</head>
+<!-- <body> Todo lo que se ve en la pantalla del usuario -->
+<body>
+<header>
+	<div class="container">
+		<div class="row top">
+			<!-- en esta linea cambiamos nuestro logo. -->
+			<div class="col-md-4"><a href="#home" data-ancla="home">
+				<img src="images/logo_p.png" alt="" class="logo"></a></div>
+			<div class="col-md-3"></div> 
+			<div class="col-md-5">
+				<ul class='botonera'>
+					<li><a href="#nosotros" data-ancla="nosotros">Quienes somos</a></li>
+					<li><a href="#servicios" data-ancla="servicios">Servicios</a></li>
+					<li><a href="#contacto" data-ancla="contacto">Contacto</a></li>
+
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="principal vertical-centered-text" id="home">
+	<div class="col-md-8 cta"><h1>Lucho Electricidad</h1> 
+			<h4>Somos una empresa dedicada al servicio técnico sobre instalaciones electricas</h4>
+			<p>Con más de 20 años de experiencia en el rubro de instalaciones y mantenimientos electricos en Capital Federal y el Gran Buenos Aires. </p>
+<a  href="#contacto" class="btn btn-primary orange">Contactenos</a>
+
+
+		</div>
+</div>
+
+<div class="nosotros orange" id="nosotros">
+	<div class="container">
+		<h1>Sobre nosotros</h1>
+		<p>Tenemos un gran conocimiento y experiencia en materia de circuitos electricos tanto en hogares como en industria. Llevamos nuestra calidad que hace que nuestros clientes nos sigan eligiendo día a día.
+        </p>
+	</div>
+</div>
+
+
+<div class="container servicios" id="servicios">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Nuestros Servicios</h1>
+		</div>
+	</div>
+	<div class="row images">
+		<div class="col-md-3">
+			<img src="images/001-enchufe.svg" alt="">
+			<h3>Hogar y Negocios</h3>
+			<p>Instalaciones civiles y comerciales.</p>
+		</div>
+		<div class="col-md-3">
+			<img src="images/002-electric-light-bulb.svg" alt="">
+			<h3>Nuevo</h3>
+			<p>Instalaciones nuevas y reparaciones</p>
+		</div>
+		<div class="col-md-3">
+			<img src="images/003-plug-Instalacion_industrial.svg" alt="">
+			<h3>Mantenimiento</h3>
+			<p>Corto circuito. Fugas. Tableros eléctricos</p>
+		</div>
+		<div class="col-md-3">
+			<img src="images/004-deal.svg" alt="">
+			<h3>Buen trato</h3>
+			<p>Trabajamos para satisfacer las demandas de nuestro clientes y que sigan confiando en nosotros</p>
+		</div>
+	</div>
+	
+</div>
+
+<footer>
+	<div class="container" id="contacto">
+		<div class="row">
+			<div class="col-md-12">
+					<h1>CONTACTO</h1><br><br>
+
+			</div>
+		</div>
+		<div class="row social">
+		<div class="col-3"></div>	
+					<div class="col-2">
+						<a href="mailto:luchoelectricidadprofesional"><img src="images/001-mail.svg" alt=""></a></div>
+
+					<div class="col-2">
+						<a href="https://www.facebook.com/LuchoElectricidad-568426267010999/"  target="_blank"><img src="images/002-facebook-logo.svg" alt=""></a></div>
+
+
+					<div class="col-2">
+						<a href="https://www.instagram.com/" target="_blank"><img src="images/003-instagram-social-network-logo-of-photo-camera.svg" alt=""></a></div>	
+	</div>
+</footer>
+<!-- Codigo que hace que las acciones de botones y cuestiones responsive funcionen-->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script>
+	// A $( document ).ready() block.
+$(document).ready(function() {    
+$('.top a').click(function(e){
+        e.preventDefault();
+        var offset = $($(this).attr('href')).offset().top;
+        $('html, body').animate({scrollTop:offset}, 600);
+        return false;
+    });
+
+});
+	
+</script>
+</body>
+</html>
